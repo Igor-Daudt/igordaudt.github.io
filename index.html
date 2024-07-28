@@ -23,9 +23,20 @@
                     <li>
                         <button onclick="scrolltoelement('portfolio')" class="scroller">Portfolio</button>
                     </li>
-                    <li class="test">
+                    <li>
                         <button  onclick="scrolltoelement('contact')" class="contact">Fale Conosco</button>
                     </li>
+                </ul>
+                <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <ul id="mobile-menu" class="mobile-menu">
+                      <li><button  onclick="scrolltoelement('background_image')" class="scroller">Home</button></li>
+                      <li><button onclick="scrolltoelement('servicos')" class="scroller">Serviços</button></li>
+                      <li><button onclick="scrolltoelement('portfolio')" class="scroller">Portfolio</button></li>
+                      <li><button  onclick="scrolltoelement('contact')" class="contact">Fale Conosco</button></li>
                 </ul>
             </div>
         </header>
@@ -46,8 +57,10 @@
     <div id="servicos" class="center_items vertical_margin_pattern">
         <div class="margin_pattern start_center column">
             <h6>Serviços</h6>
-            <h1 class="title_section">Solucionando Problemas</h1>
-            <div class="blue_line"></div>
+            <div class="column width_content">
+                <h1 class="title_section">Solucionando Problemas</h1>
+                <div class="blue_line"></div>
+            </div>
             <ul class="cards_row gap48 row nav">
                 <li>
                     <div class="container_icon small_margin_bottom">
@@ -98,19 +111,24 @@
 
     <div id="portfolio" class="center_items  margin_bottom_bigger">
         <div class="margin_pattern start_start gap48 nowrap  column">
-            <div class="flex1">
-                <h1>Portfolio</h1>
+            <div>
+                <h6>Designs</h6>
+                <div class="column width_content">
+                    <h1 class="title_section width_content">Portfolio</h1>
+                    <div class="blue_line"></div>
+                </div>
+                
                 <h5> Projetos que incluem lojas virtuais, blogs, portais institucionais...</h5>
             </div>
-            <div class="row right gap12">
+            <div class="row gap12">
                     <li class="image">
-                        <img src="images/Desktop - 2.png" alt="">
+                        <img src="images/site3.png" alt="">
                     </li>
                     <li class="image">
-                        <img src="images/Desktop - 2.png" alt="">
+                        <img src="images/site4.png" alt="">
                     </li>
                     <li class="image">
-                        <img src="images/Desktop - 2.png" alt="">
+                        <img src="images/site5.png" alt="">
                     </li>
                 </ul>
             </div>
@@ -122,10 +140,14 @@
     <div class="center_items vertical_margin_pattern margin_bottom_bigger">
         <div class="margin_pattern start_start gap48">
             <div class="flex1">
-                <h1 class="min_margin_bottom">Extensões</h1>
+                <h6>Diferenciais</h6>
+                    <div class="column width_content">
+                        <h1 class="title_section width_content">Extensões</h1>
+                        <div class="blue_line"></div>
+                    </div>
                 <h3>Provemos todos os Serviços que a sua empresa precisa para fazer o próximo case de sucesso</h3>
             </div>
-            <div class="right gap48">
+            <div class="right gap48 extensions">
                 <div class="start_start row gap24">
                     <div>
                         <img src="images/globe.png" alt="">
@@ -155,8 +177,12 @@
     </div>
 
     <div class="center_items vertical_margin_pattern">
-        <div class="margin_pattern start_start">
-            <h1 class="small_margin_bottom">Como conseguir meu Site?</h1>
+        <div class="margin_pattern start_start column">
+            <h6>Passo-a-Passo</h6>
+            <div class="column width_content">
+                <h1 class="title_section width_content">Como conseguir meu Site?</h1>
+                <div class="blue_line"></div>
+            </div>
             <h3 class="big_margin_bottom">Buscando sempre o maior dialógo e o maior feedback no processo</h3>
             <div class="row gap48 steps">
                 <div class="column flex1 center_items">
@@ -193,7 +219,7 @@
             <iframe name="votar" style="display:none;"></iframe>
             <form method="post" action="send.php" class="place_email" target='votar'>
                 <div class="row center_items nowrap">
-                    <input type="text" placeholder="Seu Email" name="subject" required>
+                    <input id="email" type="email" placeholder="Seu Email" name="subject" required>
                     <button type="submit" name="send" id='send'> Enviar</button>
                 </div>
                 <p id='sucess' class='none'>Enviado com Sucesso! Retornaremos em breve</p>
@@ -235,6 +261,6 @@
             </ul>
         </div>
     </footer>
-    <script src="app.js"></script>
+    <script language="JavaScript" type="text/javascript" src="app.js"></script>
 </body>
 </html>
